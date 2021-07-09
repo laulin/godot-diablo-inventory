@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://grid.png" type="Texture" id=1]
+[ext_resource path="res://Inventory.gd" type="Script" id=2]
+[ext_resource path="res://EquipmentSlots.gd" type="Script" id=3]
+[ext_resource path="res://GridBackPack.gd" type="Script" id=4]
+
+[node name="Inventory" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InventoryBase" type="Panel" parent="."]
+margin_left = -440.0
+margin_top = -214.0
+margin_right = 396.0
+margin_bottom = 216.0
+rect_pivot_offset = Vector2( -194, 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EquipmentSlots" type="Panel" parent="."]
+self_modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+margin_left = 79.0
+margin_top = -179.0
+margin_right = 368.0
+margin_bottom = 179.0
+rect_pivot_offset = Vector2( -194, 20 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HEAD" type="Panel" parent="EquipmentSlots"]
+margin_left = 163.0
+margin_top = 7.0
+margin_right = 231.0
+margin_bottom = 90.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CHEST" type="Panel" parent="EquipmentSlots"]
+margin_left = 146.0
+margin_top = 106.0
+margin_right = 246.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MAIN_HAND" type="Panel" parent="EquipmentSlots"]
+margin_left = 17.0
+margin_top = 105.0
+margin_right = 117.0
+margin_bottom = 269.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LEGS" type="Panel" parent="EquipmentSlots"]
+margin_left = 149.0
+margin_top = 287.0
+margin_right = 249.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridBackPack" type="TextureRect" parent="."]
+self_modulate = Color( 0.478431, 0.478431, 0.478431, 1 )
+margin_left = -400.0
+margin_top = -127.0
+margin_right = 48.0
+margin_bottom = 129.0
+texture = ExtResource( 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
